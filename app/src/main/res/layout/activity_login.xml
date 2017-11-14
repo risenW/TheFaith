@@ -12,36 +12,50 @@
     android:orientation="vertical"
     tools:context="com.afridevelopers.thefaith.LoginActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/cardview_dark_background"
+        android:text="Enter Your details to log in below"
+        android:layout_weight="5" />
+
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="7"
         android:id="@+id/username"
         android:gravity="center"
         android:hint="@string/username"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="7"
         android:id="@+id/password"
         android:gravity="center"
         android:hint="@string/password"/>
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="5"
         android:id="@+id/login"
         android:background="@color/colorPrimary"
         android:text="@string/login"
         style="@style/loginBtn" />
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="5"
         android:id="@+id/create_account"
         android:background="@color/colorPrimary"
         android:text="@string/create_account"
         style="@style/loginBtn" />
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="5"
         android:id="@+id/forgot_password"
         android:background="@android:color/holo_red_light"
         android:text="@string/forgot_password"

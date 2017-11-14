@@ -3,6 +3,15 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="create_account">Create Account</string>
-    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_password">Forgot Password?</string>
     <string name="username">Username</string>
+    <string name="enter_code_here">Enter Code Here</string>
+    <string name="verification_text">Enter the verification code sent to your Email</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="verify">Verify</string>
+
+    <string-array name="countries">
+        <item>Uganda</item>
+        <item>Nigeria</item>
+    </string-array>
 </resources>
