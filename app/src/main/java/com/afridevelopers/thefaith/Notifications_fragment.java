@@ -17,6 +17,11 @@ public class Notifications_fragment extends Fragment {
     public Notifications_fragment() {
         // Required empty public constructor
     }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
 
 
     @Override

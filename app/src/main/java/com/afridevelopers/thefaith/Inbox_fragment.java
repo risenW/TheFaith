@@ -17,6 +17,11 @@ public class Inbox_fragment extends Fragment {
     public Inbox_fragment() {
         // Required empty public constructor
     }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
 
 
     @Override
