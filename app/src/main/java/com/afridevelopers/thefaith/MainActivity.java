@@ -26,11 +26,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+        //,Method to Initialize the Navigation View
         setNavigationDrawer();
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -55,15 +56,10 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFrag(new Activity_fragment(), "Activity");
         adapter.addFrag(new Notifications_fragment(), "Notifications");
         adapter.addFrag(new messages_fragment(), "Messages");
-//        adapter.addFrag(new FourFragment(), "FOUR");
-//        adapter.addFrag(new FiveFragment(), "FIVE");
-//        adapter.addFrag(new SixFragment(), "SIX");
-//        adapter.addFrag(new SevenFragment(), "SEVEN");
-//        adapter.addFrag(new EightFragment(), "EIGHT");
-//        adapter.addFrag(new NineFragment(), "NINE");
-//        adapter.addFrag(new TenFragment(), "TEN");
         viewPager.setAdapter(adapter);
     }
+
+    //Custom Fragment Adapter
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
