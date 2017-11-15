@@ -1,5 +1,6 @@
 package com.afridevelopers.thefaith;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -14,6 +15,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -24,12 +27,14 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private ImageView profilePic,coverpic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
 
+        //Method to Initialize toolbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.menu_bars);
@@ -40,47 +45,100 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.openDrawer(Gravity.LEFT);
             }
         });
-
         //Method to Initialize the Navigation View
         setNavigationDrawer();
+
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
     }
 
     private void setNavigationDrawer() {
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         NavigationView navigationView = (NavigationView)findViewById(R.id.navigation);
+        //Gets the header view and make it clickable
+        View headerView = navigationView.getHeaderView(0);
+        RelativeLayout header = (RelativeLayout)headerView.findViewById(R.id.view_container);
+        header.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,UserProfileActivity.class);
+                startActivity(intent);
+                drawerLayout.closeDrawers();
+            }
+        });
+//        navigationView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                profilePic = (ImageView)view.findViewById(R.id.img_profile);
+//                coverpic = (ImageView)view.findViewById(R.id.img_cover_bg);
+//
+//                profilePic.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//
+//                    }
+//                });
+//                coverpic.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        Intent intent = new Intent(MainActivity.this,UserProfileActivity.class);
+//                        startActivity(intent);
+//                    }
+//                });
+//            }
+//        });
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//                Fragment fragment = null;
+
                 int itemClick = item.getItemId();
                 switch (itemClick){
                     case R.id.nav_home:
                         viewPager.setCurrentItem(0);
                         drawerLayout.closeDrawers();
                         break;
+                    case R.id.img_profile:
+                        Intent intent = new Intent(MainActivity.this,UserProfileActivity.class);
+                        startActivity(intent);
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.img_cover_bg:
+                        Intent intent0 = new Intent(MainActivity.this,UserProfileActivity.class);
+                        startActivity(intent0);
+                        drawerLayout.closeDrawers();
+                        break;
                     case R.id.nav_profile:
-                        Toast.makeText(MainActivity.this, "Profile clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent1 = new Intent(MainActivity.this,UserProfileActivity.class);
+                        startActivity(intent1);
+                        drawerLayout.closeDrawers();
+
                         break;
                     case R.id.nav_Messages:
                         viewPager.setCurrentItem(2);
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.nav_friends:
-                        Toast.makeText(MainActivity.this, "Friends clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent2 = new Intent(MainActivity.this,FriendListActivity.class);
+                        startActivity(intent2);
+                        drawerLayout.closeDrawers();
+
                         break;
                     case R.id.nav_notifs:
                         viewPager.setCurrentItem(1);
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.nav_settings:
-                        Toast.makeText(MainActivity.this, "Settings clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent3 = new Intent(MainActivity.this,SettingsActivity.class);
+                        startActivity(intent3);
+                        drawerLayout.closeDrawers();
                         break;
                     case R.id.nav_Privacy_policies:
-                        Toast.makeText(MainActivity.this, "Privacy clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent4 = new Intent(MainActivity.this,PrivacyPolicies.class);
+                        startActivity(intent4);
+                        drawerLayout.closeDrawers();
                         break;
                     case R.id.nav_logout:
                         Toast.makeText(MainActivity.this, "LogOut clicked", Toast.LENGTH_SHORT).show();
@@ -88,15 +146,6 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         Toast.makeText(MainActivity.this, "Closed ", Toast.LENGTH_SHORT).show();
                 }
-
-//                if (fragment != null){
-//
-//                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//                    transaction.replace(R.id.nav_frame,fragment);
-//                    transaction.commit();
-//                    drawerLayout.closeDrawers();
-//                    return true;
-//                }
 
                 return false;
             }
