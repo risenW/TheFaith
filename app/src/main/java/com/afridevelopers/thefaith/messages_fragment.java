@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Inbox_fragment extends Fragment {
+public class messages_fragment extends Fragment {
 
 
-    public Inbox_fragment() {
+    public messages_fragment() {
         // Required empty public constructor
     }
     @Override

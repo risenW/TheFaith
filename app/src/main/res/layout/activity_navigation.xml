@@ -9,7 +9,7 @@
     android:id="@+id/drawer_layout">
 
    <include
-       layout="@layout/home_page_activity"
+       layout="@layout/home_tabs_activity"
        android:layout_height="match_parent"
        android:layout_width="match_parent"/>
 

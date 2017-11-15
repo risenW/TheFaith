@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -52,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new Notifications_fragment(), "ONE");
-        adapter.addFrag(new Inbox_fragment(), "TWO");
-        adapter.addFrag(new Activity_fragment(), "THREE");
+        adapter.addFrag(new Activity_fragment(), "Activity");
+        adapter.addFrag(new Notifications_fragment(), "Notifications");
+        adapter.addFrag(new messages_fragment(), "Messages");
 //        adapter.addFrag(new FourFragment(), "FOUR");
 //        adapter.addFrag(new FiveFragment(), "FIVE");
 //        adapter.addFrag(new SixFragment(), "SIX");
