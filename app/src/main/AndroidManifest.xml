@@ -18,7 +18,18 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".UnblockActivity"></activity>
+        <activity android:name=".UnblockActivity" />
+        <activity android:name=".UserProfileActivity" />
+        <activity
+            android:name=".FriendListActivity"
+            android:label="@string/title_activity_friend_list"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".PrivacyPolicies" />
+        <activity android:name=".AboutApp"></activity>
     </application>
 
 </manifest>

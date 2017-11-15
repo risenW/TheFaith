@@ -55,22 +55,26 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                Fragment fragment = null;
                 int itemClick = item.getItemId();
                 switch (itemClick){
                     case R.id.nav_home:
-                        Toast.makeText(MainActivity.this, "Home clicked", Toast.LENGTH_SHORT).show();
+                        viewPager.setCurrentItem(0);
+                        drawerLayout.closeDrawers();
                         break;
                     case R.id.nav_profile:
                         Toast.makeText(MainActivity.this, "Profile clicked", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_Messages:
-                        Toast.makeText(MainActivity.this, "Messages clicked", Toast.LENGTH_SHORT).show();
+                        viewPager.setCurrentItem(2);
+                        drawerLayout.closeDrawers();
                         break;
                     case R.id.nav_friends:
                         Toast.makeText(MainActivity.this, "Friends clicked", Toast.LENGTH_SHORT).show();
                         break;
-                    case R.id.nav_discussions:
-                        Toast.makeText(MainActivity.this, "Discuss clicked", Toast.LENGTH_SHORT).show();
+                    case R.id.nav_notifs:
+                        viewPager.setCurrentItem(1);
+                        drawerLayout.closeDrawers();
                         break;
                     case R.id.nav_settings:
                         Toast.makeText(MainActivity.this, "Settings clicked", Toast.LENGTH_SHORT).show();
@@ -84,6 +88,15 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         Toast.makeText(MainActivity.this, "Closed ", Toast.LENGTH_SHORT).show();
                 }
+
+//                if (fragment != null){
+//
+//                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//                    transaction.replace(R.id.nav_frame,fragment);
+//                    transaction.commit();
+//                    drawerLayout.closeDrawers();
+//                    return true;
+//                }
 
                 return false;
             }
