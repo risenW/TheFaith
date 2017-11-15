@@ -6,14 +6,15 @@
     android:layout_height="160dp"
     android:gravity="bottom"
     android:orientation="vertical"
+    android:background="@color/colorPrimary"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/img_header_bg"
+        android:id="@+id/img_cover_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/cover1" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -27,18 +28,25 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:paddingTop="16dp"
-            app:srcCompat="@android:drawable/sym_def_app_icon" />
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/profile_pic" />
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/user_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
+            android:text="\@Micheal"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
-            android:id="@+id/website"
+            android:id="@+id/name"
             android:layout_width="wrap_content"
+            android:text="Micheal .W. Smith"
+            android:padding="5dp"
+            android:background="@color/colorPrimary"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
