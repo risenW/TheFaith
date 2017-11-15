@@ -11,7 +11,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,16 +29,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
-        //,Method to Initialize the Navigation View
-        setNavigationDrawer();
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar.setNavigationIcon(R.drawable.menu_bars);
+        getSupportActionBar().setDisplayShowTitleEnabled (false);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(Gravity.LEFT);
+            }
+        });
 
+        //Method to Initialize the Navigation View
+        setNavigationDrawer();
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
-
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
     }
@@ -46,6 +55,36 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int itemClick = item.getItemId();
+                switch (itemClick){
+                    case R.id.nav_home:
+                        Toast.makeText(MainActivity.this, "Home clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_profile:
+                        Toast.makeText(MainActivity.this, "Profile clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_Messages:
+                        Toast.makeText(MainActivity.this, "Messages clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_friends:
+                        Toast.makeText(MainActivity.this, "Friends clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_discussions:
+                        Toast.makeText(MainActivity.this, "Discuss clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_settings:
+                        Toast.makeText(MainActivity.this, "Settings clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_Privacy_policies:
+                        Toast.makeText(MainActivity.this, "Privacy clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_logout:
+                        Toast.makeText(MainActivity.this, "LogOut clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        Toast.makeText(MainActivity.this, "Closed ", Toast.LENGTH_SHORT).show();
+                }
+
                 return false;
             }
         });
