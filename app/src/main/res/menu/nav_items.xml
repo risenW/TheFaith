@@ -16,7 +16,7 @@
             android:title="Messages"/>
         <item
             android:id="@+id/nav_friends"
-            android:icon="@drawable/user_white"
+            android:icon="@drawable/ic_supervisor_account_white_18dp"
             android:title="Friends"/>
         <item
             android:id="@+id/nav_notifs"

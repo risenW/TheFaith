@@ -24,7 +24,7 @@
                     android:layout_gravity="center"
                     app:tabGravity="fill"
                     app:tabPadding="0dp"
-                    app:tabTextAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    app:tabTextAppearance="@style/Base.TextAppearance.AppCompat.Title"
                     app:tabSelectedTextColor="@color/cardview_dark_background"
                     app:tabTextColor="@android:color/white"
                     />

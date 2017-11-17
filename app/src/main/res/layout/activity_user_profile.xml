@@ -76,6 +76,7 @@
 
                <TextView
                    android:layout_width="match_parent"
+                   android:id="@+id/profile_text"
                    android:layout_height="0dp"
                    android:layout_weight="20"
                    android:padding="5dp"
@@ -91,22 +92,31 @@
                 android:layout_weight="7"
                 android:orientation="horizontal">
 
+                <android.support.v7.widget.CardView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="15"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="5dp">
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="10"
-                        android:background="@color/colorPrimary"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Email"
+                        android:textSize="20sp"
                         android:gravity="center"
-                        />
+                        android:textAlignment="center"
+                        android:text="Email"/>
+
+                </android.support.v7.widget.CardView>
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_weight="50"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
                         android:textColor="@android:color/black"
                         android:text="thefaithglobal@gmail.com"
-                        android:textAlignment="center"
                         />
 
             </LinearLayout>
@@ -118,14 +128,23 @@
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
+                <android.support.v7.widget.CardView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="15"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="5dp">
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="10"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="BirthDay"
-                        android:background="@color/colorPrimary"
+                        android:textSize="20sp"
                         android:gravity="center"
-                        />
+                        android:textAlignment="center"
+                        android:text="Birthday"/>
+
+                </android.support.v7.widget.CardView>
 
                     <TextView
                         android:layout_width="0dp"
@@ -145,14 +164,23 @@
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="10"
+        <android.support.v7.widget.CardView
             android:layout_height="match_parent"
-            android:text="Sex"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            />
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:layout_marginTop="10dp"
+            app:cardElevation="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:text="Sex"/>
+
+        </android.support.v7.widget.CardView>
 
         <TextView
             android:layout_width="0dp"
@@ -172,14 +200,23 @@
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="10"
+        <android.support.v7.widget.CardView
             android:layout_height="match_parent"
-            android:text="Country"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            />
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:layout_marginTop="10dp"
+            app:cardElevation="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:text="Country"/>
+
+        </android.support.v7.widget.CardView>
 
         <TextView
             android:layout_width="0dp"
@@ -192,6 +229,15 @@
             />
 
     </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
 
 
 

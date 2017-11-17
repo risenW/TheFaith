@@ -12,14 +12,23 @@
     android:orientation="vertical"
     tools:context="com.afridevelopers.thefaith.LoginActivity">
 
-    <TextView
-        android:layout_width="match_parent"
+    <android.support.v7.widget.CardView
         android:layout_height="0dp"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="@color/cardview_dark_background"
-        android:text="Enter Your details to log in below"
-        android:layout_weight="5" />
+        android:layout_width="match_parent"
+        android:layout_weight="5"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        app:cardElevation="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="Enter Your details to log in below"/>
+
+    </android.support.v7.widget.CardView>
 
     <EditText
         android:layout_width="match_parent"
@@ -36,30 +45,64 @@
         android:id="@+id/password"
         android:gravity="center"
         android:hint="@string/password"/>
-    <Button
-        android:layout_width="match_parent"
+
+    <android.support.v7.widget.CardView
         android:layout_height="0dp"
-        android:layout_weight="5"
-        android:id="@+id/login"
-        android:background="@color/colorPrimary"
-        android:text="@string/login"
-        style="@style/loginBtn" />
-    <Button
         android:layout_width="match_parent"
-        android:layout_height="0dp"
         android:layout_weight="5"
-        android:id="@+id/create_account"
-        android:background="@color/colorPrimary"
-        android:text="@string/create_account"
-        style="@style/loginBtn" />
-    <Button
+        app:cardCornerRadius="20dp"
+        android:id="@+id/login_btn"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        app:cardElevation="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="@string/login"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
         android:layout_weight="5"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/create_password"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        app:cardElevation="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="@string/create_account"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="5"
+        app:cardCornerRadius="20dp"
         android:id="@+id/forgot_password"
-        android:background="@android:color/holo_red_light"
-        android:text="@string/forgot_password"
-        style="@style/loginBtn" />
+        app:cardBackgroundColor="@android:color/holo_red_light"
+        android:layout_marginTop="10dp"
+        app:cardElevation="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="@string/forgot_password"/>
+
+    </android.support.v7.widget.CardView>
+
 
 
 
