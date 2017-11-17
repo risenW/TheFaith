@@ -18,7 +18,8 @@ public class SplashActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+
+                Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
                 startActivity(intent);
             }
         });

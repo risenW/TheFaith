@@ -70,7 +70,7 @@
         android:layout_width="match_parent"
         android:layout_weight="5"
         app:cardCornerRadius="20dp"
-        android:id="@+id/create_password"
+        android:id="@+id/create_account"
         app:cardBackgroundColor="@color/colorPrimary"
         android:layout_marginTop="10dp"
         app:cardElevation="5dp">

@@ -14,5 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/click"
-        android:text="click"/>
+        android:background="@color/colorPrimary"
+        android:text="Temporary splash screen. click to continue"/>
 </RelativeLayout>
