@@ -21,8 +21,13 @@
                     android:id="@+id/tabs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     app:tabGravity="fill"
-                    android:fitsSystemWindows="true"/>
+                    app:tabPadding="0dp"
+                    app:tabTextAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    app:tabSelectedTextColor="@color/cardview_dark_background"
+                    app:tabTextColor="@android:color/white"
+                    />
 
         </android.support.design.widget.AppBarLayout>
 

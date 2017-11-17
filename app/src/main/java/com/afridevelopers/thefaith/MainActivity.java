@@ -69,27 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.closeDrawers();
             }
         });
-//        navigationView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                profilePic = (ImageView)view.findViewById(R.id.img_profile);
-//                coverpic = (ImageView)view.findViewById(R.id.img_cover_bg);
-//
-//                profilePic.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//
-//                    }
-//                });
-//                coverpic.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        Intent intent = new Intent(MainActivity.this,UserProfileActivity.class);
-//                        startActivity(intent);
-//                    }
-//                });
-//            }
-//        });
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -98,16 +77,6 @@ public class MainActivity extends AppCompatActivity {
                 switch (itemClick){
                     case R.id.nav_home:
                         viewPager.setCurrentItem(0);
-                        drawerLayout.closeDrawers();
-                        break;
-                    case R.id.img_profile:
-                        Intent intent = new Intent(MainActivity.this,UserProfileActivity.class);
-                        startActivity(intent);
-                        drawerLayout.closeDrawers();
-                        break;
-                    case R.id.img_cover_bg:
-                        Intent intent0 = new Intent(MainActivity.this,UserProfileActivity.class);
-                        startActivity(intent0);
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.nav_profile:
@@ -156,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new Activity_fragment(), "Activity");
         adapter.addFrag(new Notifications_fragment(), "Notifications");
-        adapter.addFrag(new messages_fragment(), "Messages");
+        adapter.addFrag(new messages_fragment(), "Inbox");
         viewPager.setAdapter(adapter);
     }
 
