@@ -36,7 +36,7 @@ public class UnblockActivity extends AppCompatActivity {
                         dialogInterface.dismiss();
                     }
                 });
-                builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //Code to Save to database and update preference
